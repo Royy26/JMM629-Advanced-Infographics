@@ -260,3 +260,8 @@ function drawConfidenceSimulator() {
 
   update(30);
 }
+
+drawTimelineChart();
+drawAblationChart();
+drawHeatmapChart();
+drawConfidenceSimulator();

@@ -70,11 +70,57 @@
         </div>
     </div>
 
+    <!-- PANEL B: Timeline chart -->
+    <div class="panel panel-b">
+        <div class="panel-label">Production Trends</div>
+        <h2 class="panel-h">Production Over Time</h2>
+        <p class="panel-p small">Each bar = one year, stacked charted / never charted. <strong>Hover</strong> any bar for exact counts.</p>
+        <div id="timeline-chart"></div>
+        <div class="chart-legend">
+            <span class="legend-dot charted-dot"></span>Charted &nbsp;
+            <span class="legend-dot notcharted-dot"></span>Never charted &nbsp;
+            <span class="legend-line-orange">—</span>&nbsp;Charted rate %
+        </div>
+        <p class="chart-caption">Production peaked ~2014–15; charted rate held near 46% throughout — structurally stable regardless of volume.</p>
+    </div>
+
+    <!-- PANEL C: Ablation bar chart -->
+    <div class="panel panel-c">
+        <div class="panel-label">Feature Ablation</div>
+        <h2 class="panel-h">What Matters Most</h2>
+        <p class="panel-p small">Average Precision (AP) — higher is better. <strong>Hover</strong> any bar for a short explanation.</p>
+        <div id="ablation-chart"></div>
+        <div class="feature-key">
+            <span class="fk-item"><strong>M</strong> = Metadata</span>
+            <span class="fk-item"><strong>I</strong> = Image</span>
+            <span class="fk-item"><strong>T</strong> = Text</span>
+            <span class="fk-item"><strong>C</strong> = Cast &amp; Prod.</span>
+        </div>
+        <p class="chart-caption">M+I+C = AP 0.6627 (best). Adding Text <em>drops</em> to 0.6430 — synopsis embeddings add noise, not signal.</p>
+    </div>
+
+    <!-- PANEL E: Heatmap -->
+    <div class="panel panel-e">
+        <div class="panel-label">Pairwise Comparison</div>
+        <h2 class="panel-h">Pairwise AP</h2>
+        <p class="panel-p small">Orange border = single modality diagonal. <strong>Hover</strong> any cell.</p>
+        <div id="heatmap-chart"></div>
+        <p class="chart-caption">Any pairing with M scores higher. T+C is the weakest pair (AP 0.346).</p>
+    </div>
+
+    <!-- PANEL F: Confidence Simulator -->
+    <div class="panel panel-f">
+        <div class="panel-label">Interactive</div>
+        <h2 class="panel-h">Model in Practice</h2>
+        <p class="panel-p small">Drag to simulate the share of anime flagged as likely charters.</p>
+        <div id="simulator-container"></div>
+    </div>
+
     <!-- PANEL G: Closing -->
     <div class="panel panel-g">
         <div class="panel-label">Takeaway</div>
         <h2 class="panel-h">Main Takeaway</h2>
-        <p class="panel-p small">Metadata is the strongest single source, poster images add meaningful signal, and synopsis text contributes less than expected.</p>
+        <p class="panel-p small">Across the five charts above, the same pattern repeats: metadata is the strongest single source, poster images help, and synopsis text contributes less than expected.</p>
         <ul class="impl-list">
             <li><strong>Best model</strong> — M + I + C reaches AP 0.6627</li>
             <li><strong>Main finding</strong> — adding text does not improve the strongest combination</li>

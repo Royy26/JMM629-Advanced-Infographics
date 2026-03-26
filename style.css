@@ -148,8 +148,12 @@ body {
 }
 
 /* Panel grid placements */
-.panel-a { grid-column: 1 / 7;  grid-row: 1; }   /* 6 cols — context    */
-.panel-g { grid-column: 7 / 13; grid-row: 1; }   /* 6 cols — takeaway   */
+.panel-a { grid-column: 1 / 5;  grid-row: 1; }   /* 4 cols — context    */
+.panel-b { grid-column: 5 / 13; grid-row: 1; }   /* 8 cols — timeline   */
+.panel-c { grid-column: 1 / 13; grid-row: 2; }   /* full width — ablation */
+.panel-e { grid-column: 1 / 5;  grid-row: 3; }   /* 4 cols — heatmap    */
+.panel-f { grid-column: 5 / 9;  grid-row: 3; }   /* 4 cols — simulator  */
+.panel-g { grid-column: 9 / 13; grid-row: 3; }   /* 4 cols — takeaway   */
 
 /* =====================================================
    PANEL BASE
@@ -510,11 +514,24 @@ body {
 /* =====================================================
    RESPONSIVE
    ===================================================== */
+@media (max-width: 960px) {
+    .poster {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .panel-a { grid-column: 1 / 4; grid-row: 1; }
+    .panel-b { grid-column: 4 / 7; grid-row: 1; }
+    .panel-c { grid-column: 1 / 7; grid-row: 2; }
+    .panel-e { grid-column: 1 / 4; grid-row: 3; }
+    .panel-f { grid-column: 4 / 7; grid-row: 3; }
+    .panel-g { grid-column: 1 / 7; grid-row: 4; }
+}
+
 @media (max-width: 600px) {
     .poster {
         grid-template-columns: 1fr;
     }
-    .panel-a, .panel-g {
+    .panel-a, .panel-b, .panel-c,
+    .panel-e, .panel-f, .panel-g {
         grid-column: 1;
         grid-row: auto;
     }
