@@ -1,0 +1,37 @@
+[
+  {
+    "combination": "C (Cast only)",
+    "ap": 0.1509,
+    "description": "Voice actor and studio reputation via Wikipedia2Vec (300-dim). Quantifies production 'star power' but is noisy alone — many actors and studios are unknown entities with sparse graph connections."
+  },
+  {
+    "combination": "T (Text only)",
+    "ap": 0.3521,
+    "description": "Synopsis text embeddings via JINA-CLIP-v2. Performance is limited by English-centric pretraining on Japanese text, and inconsistent synopsis styles (some are promotional, others descriptive)."
+  },
+  {
+    "combination": "I (Image only)",
+    "ap": 0.3445,
+    "description": "Poster visual features extracted via CLIP (pretrained on 400M image-text pairs). Captures art style, color palette, and character design. Studios invest heavily in key visuals — posters often generate pre-broadcast buzz."
+  },
+  {
+    "combination": "M (Metadata only)",
+    "ap": 0.6122,
+    "description": "Release year, studio, genre tags, and broadcast slot. The strongest single modality — captures temporal market cycles, genre supply/demand, and studio track records."
+  },
+  {
+    "combination": "M + I",
+    "ap": 0.6455,
+    "description": "Metadata + Image. Powerful combination: temporal and genre context (M) paired with visual identity signal (I). Cast/Production adds a modest but consistent gain on top of this strong baseline."
+  },
+  {
+    "combination": "M + T + I + C",
+    "ap": 0.6430,
+    "description": "All four modalities combined. Adding Text (T) HURTS performance compared to M+I+C — noisy Japanese synopsis embeddings introduce irrelevant variance that dilutes signal from the stronger modalities. More features ≠ better performance."
+  },
+  {
+    "combination": "M + I + C (Best ★)",
+    "ap": 0.6627,
+    "description": "BEST COMBINATION — AP 0.6627. Metadata + Image + Cast/Production. The production network confirms whether the team behind the anime has the track record to execute successfully."
+  }
+]

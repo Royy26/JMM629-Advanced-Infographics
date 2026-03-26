@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Can an Algorithm Predict Anime Success? | Sijie Huang</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ─── HEADER BAR ─── -->
+<header class="site-header">
+    <div class="hdr-inner">
+        <span class="tag">Academic Data Narrative · JMM629 Advanced Infographics · 2026</span>
+        <span class="author">Sijie Huang</span>
+    </div>
+</header>
+
+<!-- ─── HERO / TITLE BAND ─── -->
+<section class="hero">
+    <div class="hero-inner">
+        <div class="hero-left">
+            <h1>Can an Algorithm<br>Predict Anime<br>Success?</h1>
+            <p class="lead">50+ TV anime premiere each season in Japan — most vanish without cracking the charts. Can data predict which ones break through, <em>before a single episode airs?</em></p>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-block">
+                <div class="stat-num">1,403</div>
+                <div class="stat-lbl">TV anime · 2000–2025</div>
+            </div>
+            <div class="stat-block stat-orange">
+                <div class="stat-num">46.4%</div>
+                <div class="stat-lbl">ever charted in ratings</div>
+            </div>
+            <div class="stat-block stat-green">
+                <div class="stat-num">0.663</div>
+                <div class="stat-lbl">best model AP score</div>
+            </div>
+            <div class="stat-block">
+                <div class="stat-num">4</div>
+                <div class="stat-lbl">data modalities tested</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── POSTER GRID ─── -->
+<main class="poster">
+
+    <!-- PANEL A: Research context sidebar -->
+    <div class="panel panel-a">
+        <div class="panel-label">The Research</div>
+        <h2 class="panel-h">25 Years · 4 Sources · 1 Question</h2>
+        <p class="panel-p">Findings from <em>Multi-Modal Supervised Learning for Improving Japanese Anime Audience Ratings Prediction</em>. A show was labelled <span class="badge-charted">charted</span> if it appeared in official weekly rankings at least once.</p>
+        <div class="src-grid">
+            <div class="src-chip"><span class="src-icon">📊</span><div><strong>Video Research</strong><br>Ratings 2000–25</div></div>
+            <div class="src-chip"><span class="src-icon">🎌</span><div><strong>MyAnimeList</strong><br>Poster images</div></div>
+            <div class="src-chip"><span class="src-icon">📖</span><div><strong>Wikipedia JP</strong><br>Synopsis text</div></div>
+            <div class="src-chip"><span class="src-icon">📅</span><div><strong>Shoboi Cal.</strong><br>Cast &amp; crew</div></div>
+        </div>
+        <blockquote class="mini-quote">"The model sees what industry insiders feel — yet the plot summary alone tells us surprisingly little."</blockquote>
+        <p class="panel-p small">Visual identity &amp; production pedigree outperform narrative synopsis. Audiences respond to <em>signals</em> more than summaries.</p>
+        <div class="viz-design-note">
+            <strong>Bertin's Visual Variables (Lecture 6)</strong>
+            <span class="vv-tag">Position</span>&nbsp;→ AP ranking &nbsp;
+            <span class="vv-tag vv-size">Size</span>&nbsp;→ data gain &nbsp;
+            <span class="vv-tag vv-color">Color</span>&nbsp;→ text modality
+        </div>
+    </div>
+
+    <!-- PANEL G: Closing -->
+    <div class="panel panel-g">
+        <div class="panel-label">Takeaway</div>
+        <h2 class="panel-h">Main Takeaway</h2>
+        <p class="panel-p small">Metadata is the strongest single source, poster images add meaningful signal, and synopsis text contributes less than expected.</p>
+        <ul class="impl-list">
+            <li><strong>Best model</strong> — M + I + C reaches AP 0.6627</li>
+            <li><strong>Main finding</strong> — adding text does not improve the strongest combination</li>
+            <li><strong>Use case</strong> — the model is most useful as an early ranking tool before broadcast</li>
+        </ul>
+        <p class="closing-note">This simplified version focuses on the core evidence instead of showing every supporting view.</p>
+    </div>
+
+</main>
+
+<!-- ─── FOOTER ─── -->
+<footer class="site-footer">
+    <span>Data: Video Research Ltd. · MyAnimeList · Japanese Wikipedia · Shoboi Calendar</span>
+    <span><em>Multi-Modal Supervised Learning for Improving Japanese Anime Audience Ratings Prediction</em></span>
+</footer>
+
+<div id="tooltip" class="tooltip"></div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
