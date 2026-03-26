@@ -42,7 +42,7 @@ If this folder is uploaded as the root of a GitHub repository, the site can be p
 
 After enabling GitHub Pages in repository settings, the page will be available at:
 
-- `https://<your-username>.github.io/<your-repository-name>/`
+- `https://royy26.github.io/JMM629-Advanced-Infographics/`
 
 ## Data Sources
 
