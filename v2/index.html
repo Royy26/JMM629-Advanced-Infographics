@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Can an Algorithm Predict Anime Success? | Sijie Huang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ─── NAV BAR ─── -->
+<nav class="site-nav" aria-label="Site navigation">
+  <span class="nav-label">JMM629 Advanced Infographics · Sijie Huang · 2026</span>
+  <span class="nav-title">Anime × Algorithm</span>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════
+     SECTION 0: CINEMATIC HERO
+     ═══════════════════════════════════════════════════════ -->
+<section id="hero" class="hero-section" aria-label="Introduction">
+
+  <!-- Anime character image (right side) — portrait cast poster -->
+  <div class="hero-bg-char" aria-hidden="true">
+    <img src="images/conan_portrait.jpg" alt="" class="hero-char-img">
+  </div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">DATA STORY · ANIME × MACHINE LEARNING</p>
+    <h1 class="hero-h1" aria-label="Can an Algorithm Predict Which Anime Will Win?">
+      <span class="hero-line">Can an Algorithm</span>
+      <span class="hero-line">Predict Which</span>
+      <span class="hero-line hero-line-accent">Anime Will Win?</span>
+    </h1>
+    <p class="hero-sub">
+      50+ TV anime premiere each season in Japan — most vanish without cracking the charts.<br>
+      We built a model to predict which ones break through,
+      <em>before a single episode airs.</em>
+    </p>
+    <div class="hero-stats-row" aria-label="Key statistics">
+      <div class="hstat">
+        <span class="hstat-n">1,403</span>
+        <span class="hstat-l">TV anime · 2000–2025</span>
+      </div>
+      <div class="hstat hstat-accent">
+        <span class="hstat-n">46.4%</span>
+        <span class="hstat-l">ever charted in ratings</span>
+      </div>
+      <div class="hstat">
+        <span class="hstat-n">4</span>
+        <span class="hstat-l">data modalities tested</span>
+      </div>
+      <div class="hstat hstat-purple">
+        <span class="hstat-n">0.666</span>
+        <span class="hstat-l">best model AP score</span>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-label="Scroll down to explore">
+      <span class="scroll-cue-text">scroll to explore</span>
+      <div class="scroll-arrow" aria-hidden="true">↓</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     SECTION 1: THE WORLD OF ANIME
+     ═══════════════════════════════════════════════════════ -->
+<section id="sec-world" class="content-section" aria-label="The World of Anime">
+  <div class="section-inner">
+    <p class="sec-eyebrow">BACKGROUND</p>
+    <h2 class="sec-h2">The World of Anime</h2>
+    <p class="sec-lead">
+      Before data — the culture. Anime is a global phenomenon worth
+      <strong>$25 billion annually</strong>, with 50–70 new TV series debuting
+      in Japan every single season.
+    </p>
+
+    <h3 class="sub-h3">Some break through. Most don't.</h3>
+    <p class="sec-body">
+      Below: a snapshot of shows from our dataset — smash hits versus titles that never charted.
+      What separated them? That's exactly what the algorithm is trying to learn.
+    </p>
+
+    <!-- Iconic anime showcase cards -->
+    <div class="anime-showcase-grid" aria-label="Example anime titles">
+
+      <div class="anime-card charted-card">
+        <div class="anime-card-badge">CHARTED ✓</div>
+        <div class="anime-card-img-wrap"><img src="images/attack-on-titan.jpg" alt="Attack on Titan poster" class="anime-card-img" loading="lazy"></div>
+        <div class="anime-card-title">Attack on Titan</div>
+        <div class="anime-card-year">2013</div>
+      </div>
+
+      <div class="anime-card charted-card">
+        <div class="anime-card-badge">CHARTED ✓</div>
+        <div class="anime-card-img-wrap"><img src="images/demon-slayer.jpg" alt="Demon Slayer poster" class="anime-card-img" loading="lazy"></div>
+        <div class="anime-card-title">Demon Slayer</div>
+        <div class="anime-card-year">2019</div>
+      </div>
+
+      <div class="anime-card charted-card">
+        <div class="anime-card-badge">CHARTED ✓</div>
+        <div class="anime-card-img-wrap"><img src="images/my-hero-academia.jpg" alt="My Hero Academia poster" class="anime-card-img" loading="lazy"></div>
+        <div class="anime-card-title">My Hero Academia</div>
+        <div class="anime-card-year">2016</div>
+      </div>
+
+      <div class="anime-card charted-card">
+        <div class="anime-card-badge">CHARTED ✓</div>
+        <div class="anime-card-img-wrap"><img src="images/jujutsu-kaisen.jpg" alt="Jujutsu Kaisen poster" class="anime-card-img" loading="lazy"></div>
+        <div class="anime-card-title">Jujutsu Kaisen</div>
+        <div class="anime-card-year">2020</div>
+      </div>
+
+      <div class="anime-card charted-card">
+        <div class="anime-card-badge">CHARTED ✓</div>
+        <div class="anime-card-img-wrap"><img src="images/dr-stone.jpg" alt="Dr. Stone poster" class="anime-card-img" loading="lazy"></div>
+        <div class="anime-card-title">Dr. Stone</div>
+        <div class="anime-card-year">2019</div>
+      </div>
+
+      <div class="anime-card notcharted-card">
+        <div class="anime-card-badge nc-badge">NEVER CHARTED ✗</div>
+        <div class="anime-card-img-wrap"><img src="images/ex-arm.jpg" alt="Ex-Arm poster" class="anime-card-img" loading="lazy"></div>
+        <div class="anime-card-title">Ex-Arm</div>
+        <div class="anime-card-year">2021</div>
+      </div>
+
+      <div class="anime-card notcharted-card">
+        <div class="anime-card-badge nc-badge">NEVER CHARTED ✗</div>
+        <div class="anime-card-img-wrap"><img src="images/wandering-witch.jpg" alt="Wandering Witch poster" class="anime-card-img" loading="lazy"></div>
+        <div class="anime-card-title">Wandering Witch</div>
+        <div class="anime-card-year">2020</div>
+      </div>
+
+      <div class="anime-card notcharted-card">
+        <div class="anime-card-badge nc-badge">NEVER CHARTED ✗</div>
+        <div class="anime-card-img-wrap"><img src="images/gibiate.jpg" alt="Gibiate poster" class="anime-card-img" loading="lazy"></div>
+        <div class="anime-card-title">Gibiate</div>
+        <div class="anime-card-year">2020</div>
+      </div>
+
+      <div class="anime-card notcharted-card">
+        <div class="anime-card-badge nc-badge">NEVER CHARTED ✗</div>
+        <div class="anime-card-img-wrap"><img src="images/lapis-religts.jpg" alt="Lapis Re:LiGHTs poster" class="anime-card-img" loading="lazy"></div>
+        <div class="anime-card-title">Lapis Re:LiGHTs</div>
+        <div class="anime-card-year">2020</div>
+      </div>
+
+      <div class="anime-card notcharted-card">
+        <div class="anime-card-badge nc-badge">NEVER CHARTED ✗</div>
+        <div class="anime-card-img-wrap"><img src="images/listeners.jpg" alt="Listeners poster" class="anime-card-img" loading="lazy"></div>
+        <div class="anime-card-title">Listeners</div>
+        <div class="anime-card-year">2020</div>
+      </div>
+
+    </div>
+
+    <div class="charted-explainer">
+      <strong>What is "charted"?</strong>
+      A show registers as <em>charted</em> if it appeared in Japan's official Video Research
+      weekly TV ratings at least once during broadcast. Less than half of all shows ever do.
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     SECTION 2: THE QUESTION
+     ═══════════════════════════════════════════════════════ -->
+<section id="sec-question" class="content-section sec-dark-alt" aria-label="The Research Question">
+  <div class="section-inner">
+    <p class="sec-eyebrow">THE RESEARCH</p>
+    <h2 class="sec-h2">So… Can Data Do What Insiders Do?</h2>
+    <p class="sec-lead">
+      Industry veterans use gut feel, franchise history, and studio reputation to predict a hit.
+      We asked: can a <strong>machine learning model</strong> replicate that signal —
+      using only pre-broadcast data?
+    </p>
+
+    <p class="sec-body">
+      We collected data on <strong>1,403 TV anime</strong> from 2000 to 2025,
+      across four distinct information types:
+    </p>
+
+    <div class="modality-grid" aria-label="Four data modalities">
+      <div class="mod-card">
+        <div class="mod-icon">📊</div>
+        <div class="mod-name"><span class="mod-letter">M</span> — Metadata</div>
+        <div class="mod-desc">Release year, studio, genre tags, broadcast slot. The foundation — captures market cycles and studio track records.</div>
+      </div>
+      <div class="mod-card">
+        <div class="mod-icon">🎨</div>
+        <div class="mod-name"><span class="mod-letter">I</span> — Image</div>
+        <div class="mod-desc">Key visual poster features via CLIP (400M image–text pairs). Captures art style, color palette, and character design.</div>
+      </div>
+      <div class="mod-card">
+        <div class="mod-icon">📖</div>
+        <div class="mod-name"><span class="mod-letter">T</span> — Text</div>
+        <div class="mod-desc">Synopsis embeddings via JINA-CLIP-v2. The story description — how the show pitches itself before airing.</div>
+      </div>
+      <div class="mod-card">
+        <div class="mod-icon">🎬</div>
+        <div class="mod-name"><span class="mod-letter">C/P</span> — Cast/Production</div>
+        <div class="mod-desc">Voice actor and studio reputation via Wikipedia2Vec. The talent and production pedigree behind the lens.</div>
+      </div>
+    </div>
+
+    <div class="data-sources-row" aria-label="Data sources">
+      <div class="src-chip"><span>📡</span><div><strong>Video Research Ltd.</strong><br>TV ratings 2000–2025</div></div>
+      <div class="src-chip"><span>🎌</span><div><strong>MyAnimeList</strong><br>Poster images + metadata</div></div>
+      <div class="src-chip"><span>📖</span><div><strong>Wikipedia JP</strong><br>Synopsis text</div></div>
+      <div class="src-chip"><span>📅</span><div><strong>Shoboi Calendar</strong><br>Cast &amp; crew</div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     SECTION 3: SCROLLAMA — PRODUCTION TRENDS
+     ═══════════════════════════════════════════════════════ -->
+<section id="sec-timeline" class="scrolly-section" aria-label="Production trends over time">
+  <div class="scrolly-container">
+
+    <!-- LEFT: sticky chart panel -->
+    <div class="sticky-panel" id="sticky-timeline" aria-label="Timeline chart">
+      <p class="sec-eyebrow">PRODUCTION TRENDS</p>
+      <h2 class="sticky-h2" id="timeline-heading">25 Years of Anime Production</h2>
+      <p class="sticky-sub" id="timeline-sub">
+        Each bar = one year. <strong style="color:#f97316">Orange</strong> = charted,
+        <span style="color:#94a3b8">gray</span> = never charted.
+        The orange line tracks the charted rate %.
+      </p>
+      <div id="timeline-chart" aria-label="Stacked bar chart of anime production by year"></div>
+      <div class="chart-legend">
+        <span class="legend-dot charted-dot"></span>Charted &nbsp;
+        <span class="legend-dot notcharted-dot"></span>Never charted &nbsp;
+        <span class="legend-line-accent">—</span>&nbsp;Charted rate %
+      </div>
+    </div>
+
+    <!-- RIGHT: scroll step narrative -->
+    <div class="scroll-steps" id="timeline-steps" aria-label="Scroll steps for timeline">
+      <div class="step" data-step="0">
+        <div class="step-card">
+          <span class="step-num">01</span>
+          <h3>A growing industry</h3>
+          <p>From 2000 to 2015, Japan's TV anime output nearly doubled — from ~35 titles per year to over 63. Yet the fraction that charted held near 46% throughout.</p>
+        </div>
+      </div>
+      <div class="step" data-step="1">
+        <div class="step-card">
+          <span class="step-num">02</span>
+          <h3>The expansion years: 2006–2010</h3>
+          <p>The mid-2000s were a breakout phase — fueled by digital fansubs, DVD culture, and international streaming. Studios raced to fill broadcast slots.</p>
+        </div>
+      </div>
+      <div class="step" data-step="2">
+        <div class="step-card">
+          <span class="step-num">03</span>
+          <h3>Peak anime era: 2014–2015</h3>
+          <p>Production peaked at 63 titles per year. This was the era of Attack on Titan, SAO, and Haikyuu. Competition was fierce — and so was the audience.</p>
+        </div>
+      </div>
+      <div class="step" data-step="3">
+        <div class="step-card">
+          <span class="step-num">04</span>
+          <h3>Stable structure: 2020–2025</h3>
+          <p>Despite a brief COVID dip in 2020, the charted rate never dropped below 45% across 25 years. The industry's competitive structure is surprisingly resilient.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     SECTION 4: FEATURE ABLATION EXPLAINER + CHART
+     ═══════════════════════════════════════════════════════ -->
+<section id="sec-ablation" class="content-section" aria-label="Feature ablation analysis">
+  <div class="section-inner wide">
+    <p class="sec-eyebrow">WHAT MATTERS MOST?</p>
+    <h2 class="sec-h2">Which data ingredients matter most?</h2>
+
+    <!-- Recipe metaphor explainer card (addresses Prof. Michela's note about "ablation is not common") -->
+    <div class="recipe-card" role="note" aria-label="What is feature ablation?">
+      <div class="recipe-icon">🍳</div>
+      <div class="recipe-text">
+        <strong>Think of it like a recipe.</strong>
+        We tested 7 combinations of 4 ingredients —
+        <em>Metadata (M), Image (I), Text (T), Cast/Production (C/P)</em> —
+        and measured which mix predicts chart hits best.
+        This technique is called <em>feature ablation</em>:
+        remove one ingredient and see if the result gets worse.
+        If it does, that ingredient was doing real work.
+      </div>
+    </div>
+
+    <!-- Modality legend key -->
+    <div class="modkey-row" aria-label="Modality legend">
+      <span class="modkey-item modkey-M"><strong>M</strong> Metadata</span>
+      <span class="modkey-item modkey-I"><strong>I</strong> Image</span>
+      <span class="modkey-item modkey-T"><strong>T</strong> Text</span>
+      <span class="modkey-item modkey-C"><strong>C/P</strong> Cast/Production</span>
+      <span class="modkey-ap">AP = Average Precision · higher is better · max 1.0</span>
+    </div>
+
+    <div class="ablation-charts-wrapper">
+      <!-- Main ablation bar chart -->
+      <div class="ablation-main">
+        <h3 class="chart-sub-h">All combinations, ranked by accuracy ↓</h3>
+        <div id="ablation-chart" aria-label="Bar chart: each combination's AP score"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     SECTION 5: SCROLLAMA — PAIRWISE COMPARISON (HEATMAP)
+     ═══════════════════════════════════════════════════════ -->
+<section id="sec-heatmap" class="scrolly-section sec-dark-alt" aria-label="Pairwise comparison heatmap">
+  <div class="scrolly-container">
+
+    <!-- LEFT: sticky heatmap panel -->
+    <div class="sticky-panel" id="sticky-heatmap" aria-label="Heatmap panel">
+      <p class="sec-eyebrow">PAIRWISE COMPARISON</p>
+      <h2 class="sticky-h2">Which pairs work best together?</h2>
+      <p class="sticky-sub" id="heatmap-sub">
+        Hover for details · <strong>Click any cell</strong> to highlight matching bars in the chart above.
+      </p>
+      <div id="heatmap-chart" aria-label="5×5 heatmap of pairwise modality AP scores"></div>
+      <p class="heatmap-note">
+        Orange border = single modality (diagonal). Darker = higher AP score.
+      </p>
+    </div>
+
+    <!-- RIGHT: scroll step narrative -->
+    <div class="scroll-steps" id="heatmap-steps" aria-label="Scroll steps for heatmap">
+      <div class="step" data-step="0">
+        <div class="step-card">
+          <span class="step-num">01</span>
+          <h3>25 pairings tested</h3>
+          <p>Every row–column intersection shows the AP score for combining those two modalities. The diagonal shows what each modality does alone.</p>
+        </div>
+      </div>
+      <div class="step" data-step="1">
+        <div class="step-card">
+          <span class="step-num">02</span>
+          <h3>Anything with M wins</h3>
+          <p>Every pair that includes <strong>Metadata (M)</strong> ranks in the top half. M+I reaches AP 0.609 — a massive jump over Image alone at 0.349.</p>
+        </div>
+      </div>
+      <div class="step" data-step="2">
+        <div class="step-card">
+          <span class="step-num">03</span>
+          <h3>Weakest pair: T + C</h3>
+          <p><strong>Text + Cast/Production</strong> achieves only AP 0.346 — barely above Cast/Production alone (0.145). Without metadata context, story descriptions and voice actor data add almost nothing.</p>
+        </div>
+      </div>
+      <div class="step" data-step="3">
+        <div class="step-card">
+          <span class="step-num">04</span>
+          <h3>Explore for yourself</h3>
+          <p>Click any cell in the heatmap to see how those modalities contributed to the final model. The ablation chart responds instantly.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     SECTION 8: MAIN TAKEAWAY
+     ═══════════════════════════════════════════════════════ -->
+<section id="sec-takeaway" class="content-section takeaway-section" aria-label="Main takeaways">
+  <div class="section-inner narrow">
+    <p class="sec-eyebrow">TAKEAWAY</p>
+    <h2 class="sec-h2">What did the algorithm learn?</h2>
+
+    <blockquote class="pull-quote">
+      "The model sees what industry insiders feel —
+      visual identity and production pedigree outperform the story summary."
+    </blockquote>
+
+    <div class="takeaway-list">
+      <div class="tw-item" data-i="0">
+        <div class="tw-num">01</div>
+        <div class="tw-body">
+          <strong>Metadata is king.</strong>
+          Release slot, studio, and genre tags give the model its strongest signal.
+          Context beats content — what's around a show matters more than the show's own description.
+        </div>
+      </div>
+      <div class="tw-item" data-i="1">
+        <div class="tw-num">02</div>
+        <div class="tw-body">
+          <strong>The poster matters — the synopsis doesn't.</strong>
+          Visual identity (Image) adds ~3 AP points on top of Metadata.
+          Text actually hurts the best model — noisy Japanese synopsis embeddings introduce
+          irrelevant variance.
+        </div>
+      </div>
+      <div class="tw-item" data-i="2">
+        <div class="tw-num">03</div>
+        <div class="tw-body">
+          <strong>Best model: AP 0.666 (M + I + C).</strong>
+          A strong industry baseline for early-season ranking —
+          most useful before broadcast, when only the studio, poster, and cast/production are known.
+        </div>
+      </div>
+    </div>
+
+    <p class="closing-note">
+      Data sources: Video Research Ltd. · MyAnimeList · Japanese Wikipedia · Shoboi Calendar<br>
+      <em>Multi-Modal Supervised Learning for Improving Japanese Anime Audience Ratings Prediction</em>
+      · Sijie Huang · JMM629 Advanced Infographics · 2026
+    </p>
+  </div>
+</section>
+
+<!-- Shared tooltip element (D3 positions it) -->
+<div id="tooltip" class="tooltip" role="tooltip" aria-hidden="true"></div>
+
+<!-- CDN scripts loaded last for performance -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://unpkg.com/scrollama@3.2.0/build/scrollama.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
