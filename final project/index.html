@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Can Data Spot a Hit Before It Airs? | Sijie Huang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="site-nav" aria-label="Site navigation">
+  <span class="nav-label">JMM629 Advanced Infographics · Sijie Huang · 2026</span>
+  <span class="nav-title">Anime x Algorithm</span>
+</nav>
+
+<div class="story-rail" aria-label="Story progress">
+  <a class="story-rail-item is-active" href="#hero" data-story-target="hero">
+    <span class="story-rail-dot" aria-hidden="true"></span>
+    <span class="story-rail-label">Intro</span>
+  </a>
+  <a class="story-rail-item" href="#sec-world" data-story-target="sec-world">
+    <span class="story-rail-dot" aria-hidden="true"></span>
+    <span class="story-rail-label">World</span>
+  </a>
+  <a class="story-rail-item" href="#sec-question" data-story-target="sec-question">
+    <span class="story-rail-dot" aria-hidden="true"></span>
+    <span class="story-rail-label">Clues</span>
+  </a>
+  <a class="story-rail-item" href="#sec-timeline" data-story-target="sec-timeline">
+    <span class="story-rail-dot" aria-hidden="true"></span>
+    <span class="story-rail-label">Context</span>
+  </a>
+  <a class="story-rail-item" href="#sec-evidence" data-story-target="sec-evidence">
+    <span class="story-rail-dot" aria-hidden="true"></span>
+    <span class="story-rail-label">Evidence</span>
+  </a>
+  <a class="story-rail-item" href="#sec-context-slot" data-story-target="sec-context-slot">
+    <span class="story-rail-dot" aria-hidden="true"></span>
+    <span class="story-rail-label">Slot</span>
+  </a>
+  <a class="story-rail-item" href="#sec-context-station" data-story-target="sec-context-station">
+    <span class="story-rail-dot" aria-hidden="true"></span>
+    <span class="story-rail-label">Station</span>
+  </a>
+  <a class="story-rail-item" href="#sec-use" data-story-target="sec-use">
+    <span class="story-rail-dot" aria-hidden="true"></span>
+    <span class="story-rail-label">Use</span>
+  </a>
+  <a class="story-rail-item" href="#sec-cases" data-story-target="sec-cases">
+    <span class="story-rail-dot" aria-hidden="true"></span>
+    <span class="story-rail-label">Cases</span>
+  </a>
+  <a class="story-rail-item" href="#sec-takeaway" data-story-target="sec-takeaway">
+    <span class="story-rail-dot" aria-hidden="true"></span>
+    <span class="story-rail-label">Takeaways</span>
+  </a>
+</div>
+
+<section id="hero" class="hero-section story-section" aria-label="Introduction">
+  <div class="hero-bg-char" aria-hidden="true">
+    <img src="images/conan_portrait.jpg" alt="" class="hero-char-img">
+  </div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">DATA STORY · ANIME · PRE-BROADCAST CLUES</p>
+    <h1 class="hero-h1" aria-label="Can data spot a hit before it airs?">
+      <span class="hero-line">Can Data Spot</span>
+      <span class="hero-line">a Hit Before</span>
+      <span class="hero-line hero-line-accent">It Airs?</span>
+    </h1>
+    <p class="hero-sub">
+      Before episode one, studios already leave clues behind: metadata, image,
+      text, cast, and production.<br>
+      We tested which of those clues most reliably point to a future TV hit.
+    </p>
+    <div class="hero-stats-row" aria-label="Key statistics">
+      <div class="hstat">
+        <span class="hstat-n">1,403</span>
+        <span class="hstat-l">TV anime · 2000–2025</span>
+      </div>
+      <div class="hstat hstat-accent">
+        <span class="hstat-n">45.8%</span>
+        <span class="hstat-l">ever reached weekly TV ratings</span>
+      </div>
+      <div class="hstat">
+        <span class="hstat-n">5</span>
+        <span class="hstat-l">early clues tested</span>
+      </div>
+      <div class="hstat hstat-purple">
+        <span class="hstat-n">31</span>
+        <span class="hstat-l">ways those clues were combined</span>
+      </div>
+    </div>
+    <p class="hero-method-note">
+      Uses only information available before a show airs. It estimates breakout potential, not artistic quality.
+    </p>
+    <div class="scroll-cue" aria-label="Scroll down to explore">
+      <span class="scroll-cue-text">scroll to explore</span>
+      <div class="scroll-arrow" aria-hidden="true">↓</div>
+    </div>
+  </div>
+</section>
+
+<section id="sec-world" class="content-section story-section" aria-label="The World of Anime">
+  <div class="section-inner">
+    <p class="sec-eyebrow">BACKGROUND</p>
+    <h2 class="sec-h2">The World of Anime</h2>
+    <p class="sec-lead">
+      Before data comes culture. Anime is a global industry worth
+      <strong>$25 billion annually</strong>, with 50–70 new TV series debuting
+      in Japan every season. Only a fraction ever reaches weekly ratings.
+    </p>
+
+    <div class="world-stats-grid" aria-label="Industry statistics">
+      <div class="wstat">
+        <div class="wstat-n">~60</div>
+        <div class="wstat-l">industry-wide estimate per season</div>
+      </div>
+      <div class="wstat">
+        <div class="wstat-n">$25B</div>
+        <div class="wstat-l">global market value</div>
+      </div>
+      <div class="wstat">
+        <div class="wstat-n">4 seasons</div>
+        <div class="wstat-l">Winter · Spring · Summer · Fall</div>
+      </div>
+      <div class="wstat">
+        <div class="wstat-n">45.8%</div>
+        <div class="wstat-l">ever appeared in weekly TV ratings</div>
+      </div>
+    </div>
+
+    <h3 class="sub-h3">Some break through. Most do not.</h3>
+    <p class="sec-body">
+      Below is a snapshot from the dataset: widely recognized hits alongside titles that never reached
+      Japan's weekly TV ratings. If only some titles ever break through, what clues are already visible
+      before they air?
+    </p>
+
+    <div class="anime-showcase-grid" aria-label="Example anime titles">
+      <div class="anime-card charted-card">
+        <div class="anime-card-badge">CHARTED</div>
+        <div class="anime-card-img-wrap"><img src="images/attack-on-titan.jpg" alt="Attack on Titan poster" class="anime-card-img" loading="lazy"></div>
+        <div class="anime-card-title">Attack on Titan</div>
+        <div class="anime-card-year">2013</div>
+      </div>
+      <div class="anime-card charted-card">
+        <div class="anime-card-badge">CHARTED</div>
+        <div class="anime-card-img-wrap"><img src="images/demon-slayer.jpg" alt="Demon Slayer poster" class="anime-card-img" loading="lazy"></div>
+        <div class="anime-card-title">Demon Slayer</div>
+        <div class="anime-card-year">2019</div>
+      </div>
+      <div class="anime-card charted-card">
+        <div class="anime-card-badge">CHARTED</div>
+        <div class="anime-card-img-wrap"><img src="images/my-hero-academia.jpg" alt="My Hero Academia poster" class="anime-card-img" loading="lazy"></div>
+        <div class="anime-card-title">My Hero Academia</div>
+        <div class="anime-card-year">2016</div>
+      </div>
+      <div class="anime-card charted-card">
+        <div class="anime-card-badge">CHARTED</div>
+        <div class="anime-card-img-wrap"><img src="images/jujutsu-kaisen.jpg" alt="Jujutsu Kaisen poster" class="anime-card-img" loading="lazy"></div>
+        <div class="anime-card-title">Jujutsu Kaisen</div>
+        <div class="anime-card-year">2020</div>
+      </div>
+      <div class="anime-card charted-card">
+        <div class="anime-card-badge">CHARTED</div>
+        <div class="anime-card-img-wrap"><img src="images/spy-x-family.jpg" alt="Spy x Family poster" class="anime-card-img" loading="lazy"></div>
+        <div class="anime-card-title">Spy x Family</div>
+        <div class="anime-card-year">2022</div>
+      </div>
+      <div class="anime-card notcharted-card">
+        <div class="anime-card-badge nc-badge">NEVER CHARTED</div>
+        <div class="anime-card-img-wrap"><img src="images/ex-arm.jpg" alt="Ex-Arm poster" class="anime-card-img" loading="lazy"></div>
+        <div class="anime-card-title">Ex-Arm</div>
+        <div class="anime-card-year">2021</div>
+      </div>
+      <div class="anime-card notcharted-card">
+        <div class="anime-card-badge nc-badge">NEVER CHARTED</div>
+        <div class="anime-card-img-wrap"><img src="images/wandering-witch.jpg" alt="Wandering Witch poster" class="anime-card-img" loading="lazy"></div>
+        <div class="anime-card-title">Wandering Witch</div>
+        <div class="anime-card-year">2020</div>
+      </div>
+      <div class="anime-card notcharted-card">
+        <div class="anime-card-badge nc-badge">NEVER CHARTED</div>
+        <div class="anime-card-img-wrap"><img src="images/gibiate.jpg" alt="Gibiate poster" class="anime-card-img" loading="lazy"></div>
+        <div class="anime-card-title">Gibiate</div>
+        <div class="anime-card-year">2020</div>
+      </div>
+      <div class="anime-card notcharted-card">
+        <div class="anime-card-badge nc-badge">NEVER CHARTED</div>
+        <div class="anime-card-img-wrap"><img src="images/lapis-religts.jpg" alt="Lapis Re:LiGHTs poster" class="anime-card-img" loading="lazy"></div>
+        <div class="anime-card-title">Lapis Re:LiGHTs</div>
+        <div class="anime-card-year">2020</div>
+      </div>
+      <div class="anime-card notcharted-card">
+        <div class="anime-card-badge nc-badge">NEVER CHARTED</div>
+        <div class="anime-card-img-wrap"><img src="images/listeners.jpg" alt="Listeners poster" class="anime-card-img" loading="lazy"></div>
+        <div class="anime-card-title">Listeners</div>
+        <div class="anime-card-year">2020</div>
+      </div>
+    </div>
+
+    <div class="charted-explainer">
+      <strong>What is "charted"?</strong>
+      A show registers as <em>charted</em> if it appears at least once in Japan's official Video Research
+      weekly TV ratings during broadcast. Less than half of all titles ever do.
+    </div>
+  </div>
+</section>
+
+<section id="sec-question" class="content-section sec-dark-alt story-section" aria-label="The Research Question">
+  <div class="section-inner">
+    <p class="sec-eyebrow">THE QUESTION</p>
+    <h2 class="sec-h2">What can you know before episode one?</h2>
+    <p class="sec-lead">
+      Industry insiders often read a season before it starts: they watch the market, the studio slate,
+      the poster, and the names attached to a project. We asked whether a model could detect those same
+      clues using only information available before broadcast.
+    </p>
+
+    <p class="sec-body">
+      We collected data on <strong>1,403 TV anime</strong> released during <strong>2000–2025</strong> across
+      <strong>five clues available before broadcast</strong>:
+    </p>
+
+    <div class="modality-grid mod-five" aria-label="Five early clues">
+      <div class="mod-card">
+        <div class="mod-icon">📊</div>
+        <div class="mod-name"><span class="mod-letter">M</span> — Metadata</div>
+        <div class="mod-desc">Release year, genre, time slot, and other scheduling context. In plain terms: what kind of market the show is entering.</div>
+      </div>
+      <div class="mod-card">
+        <div class="mod-icon">🎨</div>
+        <div class="mod-name"><span class="mod-letter">I</span> — Image</div>
+        <div class="mod-desc">Poster features. Captures the first visual impression a viewer or editor gets.</div>
+      </div>
+      <div class="mod-card">
+        <div class="mod-icon">📖</div>
+        <div class="mod-name"><span class="mod-letter">T</span> — Text</div>
+        <div class="mod-desc">The synopsis. Captures how the story is described before anyone watches it.</div>
+      </div>
+      <div class="mod-card">
+        <div class="mod-icon">🎙️</div>
+        <div class="mod-name"><span class="mod-letter">C</span> — Cast</div>
+        <div class="mod-desc">Voice actor information. A clue about familiar names attached to the show.</div>
+      </div>
+      <div class="mod-card">
+        <div class="mod-icon">🏭</div>
+        <div class="mod-name"><span class="mod-letter">P</span> — Production</div>
+        <div class="mod-desc">Studio and production credits. A clue about the industry backing behind the project.</div>
+      </div>
+    </div>
+
+    <h3 class="sources-subtitle">Where We Got the Data</h3>
+    <div class="data-sources-row" aria-label="Data sources">
+      <div class="src-chip"><span>📡</span><div><strong>Video Research Ltd.</strong><br>Weekly TV ratings, 2000–2025</div></div>
+      <div class="src-chip"><span>🎌</span><div><strong>MyAnimeList</strong><br>Image data and basic title info</div></div>
+      <div class="src-chip"><span>📖</span><div><strong>Japanese Wikipedia</strong><br>Story summaries and related names</div></div>
+      <div class="src-chip"><span>📅</span><div><strong>Shoboi Calendar</strong><br>Cast lists and production credits</div></div>
+    </div>
+
+    <p class="research-note">
+      We are not asking which anime is "best." We are asking which early clues most reliably point to a future TV hit.
+      <strong>This model does one simple thing:</strong> before a show airs, it ranks new titles by how closely their pre-release clues resemble anime that later reached the TV ratings chart.
+    </p>
+  </div>
+</section>
+
+<section id="sec-timeline" class="scrolly-section story-section" aria-label="Production trends over time">
+  <div class="scrolly-container">
+    <div class="sticky-panel" id="sticky-timeline" aria-label="Timeline chart">
+      <p class="sec-eyebrow">WHY METADATA MATTERS</p>
+      <h2 class="sticky-h2" id="timeline-heading">Anime Production, 2000–2025</h2>
+      <p class="sticky-sub" id="timeline-sub">
+        Each bar is one year. <strong style="color:#f97316">Orange</strong> marks charted titles,
+        <span style="color:#94a3b8">gray</span> marks titles that never charted.
+        The line tracks the charted rate over time.
+      </p>
+      <div class="reading-guide" aria-label="Timeline reading guide">
+        <div class="guide-chip">
+          <span class="guide-kicker">Reading cue</span>
+          <p id="timeline-guide-text">Start with the full timeline, then follow the highlighted years to see why metadata is already informative before broadcast.</p>
+        </div>
+        <div class="step-progress" id="timeline-progress" aria-label="Timeline story progress">
+          <span class="step-progress-label">Story step</span>
+          <div class="step-progress-track">
+            <span class="step-progress-dot is-active" data-progress-step="0"></span>
+            <span class="step-progress-dot" data-progress-step="1"></span>
+            <span class="step-progress-dot" data-progress-step="2"></span>
+            <span class="step-progress-dot" data-progress-step="3"></span>
+          </div>
+        </div>
+      </div>
+      <div id="timeline-chart" aria-label="Stacked bar chart of anime production by year"></div>
+      <div class="chart-legend">
+        <span class="legend-dot charted-dot"></span>Charted
+        <span class="legend-dot notcharted-dot"></span>Never charted
+        <span class="legend-line-accent">—</span>Charted rate
+      </div>
+    </div>
+
+    <div class="scroll-steps" id="timeline-steps" aria-label="Scroll steps for timeline">
+      <div class="step" data-step="0">
+        <div class="step-card">
+          <span class="step-num">01</span>
+          <h3>A growing industry</h3>
+          <p>From 2000 to 2015, Japan's TV anime output nearly doubled. A show never enters a neutral market; it arrives in a season with a certain scale and level of competition.</p>
+        </div>
+      </div>
+      <div class="step" data-step="1">
+        <div class="step-card">
+          <span class="step-num">02</span>
+          <h3>The expansion years</h3>
+          <p>By the mid-2000s, more titles were fighting for attention. Release year, timing, and season became clues in their own right.</p>
+        </div>
+      </div>
+      <div class="step" data-step="2">
+        <div class="step-card">
+          <span class="step-num">03</span>
+          <h3>Peak output, same pressure</h3>
+          <p>Even when total output peaks, the share that reaches weekly ratings stays fairly steady. That makes metadata especially useful: the model is reading where a show enters the field.</p>
+        </div>
+      </div>
+      <div class="step" data-step="3">
+        <div class="step-card">
+          <span class="step-num">04</span>
+          <h3>Why context stays powerful</h3>
+          <p>This is why metadata remains the strongest single clue. The model is not just reading a title; it is reading metadata before viewers react.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sec-evidence" class="content-section sec-dark-alt story-section" aria-label="Evidence across 31 combinations">
+  <div class="section-inner wide evidence-section-inner">
+    <p class="sec-eyebrow">CORE EVIDENCE</p>
+    <h2 class="sec-h2">31 combinations, one clear pattern</h2>
+    <p class="sec-lead evidence-lead">
+      Across all 31 tested versions, one pattern keeps returning: metadata leads, image helps next,
+      and the top-ranked combinations form a stable high-performing tier. Click a square to highlight matching bars,
+      or click a bar to trace the clues it contains.
+    </p>
+
+    <p class="chart-reading-cue evidence-score-note">
+      <strong>Here, the score measures ranking strength:</strong> a higher score means the model keeps real future hits closer to the top.
+      It is not a success probability or an artistic-quality score.
+    </p>
+
+    <div class="evidence-dual evidence-dual-simple">
+      <article class="evidence-chart-card">
+        <h3 class="chart-sub-h">Two-clue map</h3>
+        <div id="heatmap-chart" aria-label="5 by 5 heatmap of pairwise clue performance"></div>
+      </article>
+
+      <article class="evidence-chart-card">
+        <h3 class="chart-sub-h">All versions, ranked</h3>
+        <div id="ranking-chart" aria-label="31-combination ranking chart"></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="sec-context-slot" class="content-section story-section" aria-label="Time-slot context">
+  <div class="section-inner wide context-layered-inner">
+    <p class="sec-eyebrow">SECOND-LAYER EVIDENCE</p>
+    <h2 class="sec-h2">One model, three markets</h2>
+    <p class="sec-lead">
+      Every show's market is decided before it airs. Metadata is strong because every title already lands in a year, a time slot,
+      and a broadcast environment before episode one airs. This view narrows to the <strong>900 titles</strong> in the broader <strong>1,403-title</strong>
+      sample with usable slot records and asks a simpler question: how different are the worlds a show enters?
+    </p>
+
+    <div class="context-main-panel context-main-panel-wide">
+      <div class="context-panel-head">
+        <div>
+          <p class="panel-kicker">Three Market Worlds</p>
+          <h3 class="panel-title">The same model lands in three very different slot scenes</h3>
+        </div>
+        <p class="panel-desc">
+          Each card shows the slot's chart rate, the shift from <strong>Metadata</strong> to <strong>All features</strong>,
+          and one short line that captures the kind of market that slot creates. The two scores are <strong>within-slot Average Precision (AP)</strong> values:
+          the first shows how well <strong>Metadata</strong> alone ranks future hits inside that slot, and the second shows how much the full signal mix improves that same ranking.
+        </p>
+      </div>
+
+      <div id="slot-context-chart" aria-label="Three market scene cards comparing slot worlds"></div>
+
+      <p class="chart-reading-cue context-reading-cue slot-context-note">
+        <strong>Morning</strong> is where separation reads most clearly, <strong>Late Night</strong> remains the most selective world,
+        and <strong>Afternoon-Eve</strong> forms the broadest stable market.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="sec-context-station" class="content-section sec-dark-alt story-section" aria-label="Supporting station evidence">
+  <div class="section-inner wide station-context-inner station-context-inner--supporting">
+    <p class="sec-eyebrow">SUPPORTING EVIDENCE</p>
+    <h2 class="sec-h2">Same clue, different channel</h2>
+    <p class="sec-lead station-context-lead station-context-lead--supporting">
+      The main pattern still holds here: <strong>Metadata</strong> leads on every channel. What changes is where
+      <strong>Image</strong> or <strong>Text</strong> adds a little extra separation at the margins. <strong>NTV</strong> starts from a much stronger base than
+      <strong>TV Tokyo</strong> or <strong>TBS</strong>, while <strong>NHK-E</strong> remains a useful reference profile.
+    </p>
+
+    <div class="context-main-panel context-main-panel-wide station-context-panel station-context-panel--supporting">
+      <div class="context-panel-head">
+        <div>
+          <p class="panel-kicker">Channel-level Nuance</p>
+          <h3 class="panel-title">The channel sets the baseline; extra clues shift it only at the margins</h3>
+        </div>
+        <p class="panel-desc station-context-desc">
+          Each card keeps the station profile visible, then traces what happens when <strong>Image</strong> or <strong>Text</strong>
+          is added to <strong>Metadata</strong>. Hover reveals a short note; click lets one comparison stay in view.
+        </p>
+      </div>
+
+      <div id="station-fingerprint-wall" class="station-fingerprint-wall" aria-label="Station fingerprint card wall"></div>
+
+      <p class="chart-reading-cue context-reading-cue slot-context-note station-context-note">
+        <strong>NTV</strong> is the clearest high-base world, <strong>TV Tokyo</strong> and <strong>TBS</strong> still mark lower-entry markets,
+        and the clearest station-specific difference still appears in how <strong>Text</strong> behaves on <strong>NTV</strong>.
+      </p>
+
+      <div id="station-detail-card" class="station-detail-card" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section id="sec-use" class="content-section story-section" aria-label="What this model is useful for">
+  <div class="section-inner">
+    <p class="sec-eyebrow">IN PRACTICE</p>
+    <h2 class="sec-h2">What this model is useful for</h2>
+    <p class="sec-lead">
+      This project uses <strong>pre-broadcast information only</strong>. That makes it useful for early-season ranking,
+      prioritizing attention, and comparing titles before audiences react.
+    </p>
+
+    <div class="use-grid" aria-label="Practical uses of the model">
+      <div class="use-card">
+        <div class="use-num">01</div>
+        <h3>Early ranking</h3>
+        <p>It can sort a new season by likely chart potential before the first episode airs.</p>
+      </div>
+      <div class="use-card">
+        <div class="use-num">02</div>
+        <h3>Planning attention</h3>
+        <p>It can help decide which titles deserve closer editorial, marketing, or investment attention first.</p>
+      </div>
+      <div class="use-card">
+        <div class="use-num">03</div>
+        <h3>Comparing clues</h3>
+        <p>It is strongest as a comparison tool: which early clues tend to matter most across the market.</p>
+      </div>
+    </div>
+
+    <div class="use-note">
+      Uses only information available before broadcast. This project estimates breakout potential, not artistic quality.
+    </div>
+  </div>
+</section>
+
+<section id="sec-cases" class="content-section sec-dark-alt story-section" aria-label="Representative case studies">
+  <div class="section-inner wide">
+    <p class="sec-eyebrow">CASE STUDIES</p>
+    <h2 class="sec-h2">Representative titles from the dataset</h2>
+    <p class="sec-lead">
+      These cards are story examples, not proof of why any one title succeeded or failed. They show how pre-air clues can line up with later outcomes.
+    </p>
+
+    <div class="case-grid" aria-label="Case study cards">
+      <article class="case-card case-charted">
+        <div class="case-poster-wrap"><img src="images/attack-on-titan.jpg" alt="Attack on Titan poster" class="case-poster" loading="lazy"></div>
+        <div class="case-body">
+          <span class="case-badge case-badge-charted">Charted</span>
+          <h3>Attack on Titan</h3>
+          <p class="case-meta">2013 · Hit example</p>
+          <p>A title with strong genre demand, a clear visual hook, and an easy-to-read metadata profile. It shows how Metadata and Image can point in the same direction.</p>
+        </div>
+      </article>
+
+      <article class="case-card case-charted">
+        <div class="case-poster-wrap"><img src="images/demon-slayer.jpg" alt="Demon Slayer poster" class="case-poster" loading="lazy"></div>
+        <div class="case-body">
+          <span class="case-badge case-badge-charted">Charted</span>
+          <h3>Demon Slayer</h3>
+          <p class="case-meta">2019 · Hit example</p>
+          <p>An Image and Production profile that already suggest scale before broadcast. This is the kind of title where Image and Production reinforce already strong Metadata.</p>
+        </div>
+      </article>
+
+      <article class="case-card case-miss">
+        <div class="case-poster-wrap"><img src="images/ex-arm.jpg" alt="Ex-Arm poster" class="case-poster" loading="lazy"></div>
+        <div class="case-body">
+          <span class="case-badge case-badge-miss">Never charted</span>
+          <h3>Ex-Arm</h3>
+          <p class="case-meta">2021 · Miss example</p>
+          <p>A title that entered the season without many strong early clues. It works as a contrast to the higher-confidence hits above.</p>
+        </div>
+      </article>
+
+      <article class="case-card case-miss">
+        <div class="case-poster-wrap"><img src="images/gibiate.jpg" alt="Gibiate poster" class="case-poster" loading="lazy"></div>
+        <div class="case-body">
+          <span class="case-badge case-badge-miss">Never charted</span>
+          <h3>Gibiate</h3>
+          <p class="case-meta">2020 · Miss example</p>
+          <p>An original production with less franchise familiarity to lean on. It shows how weak metadata can keep confidence low before audience response appears.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="sec-takeaway" class="content-section takeaway-section story-section" aria-label="Main takeaways">
+  <div class="section-inner narrow">
+    <p class="sec-eyebrow">TAKEAWAY</p>
+    <h2 class="sec-h2">What did the model learn?</h2>
+
+    <blockquote class="pull-quote">
+      "Before episode one airs, the model reads a show's metadata more clearly than the plot summary inside it."
+    </blockquote>
+
+    <div class="takeaway-list">
+      <div class="tw-item" data-i="0">
+        <div class="tw-num">01</div>
+        <div class="tw-body">
+          <strong>Metadata is the strongest clue.</strong>
+          On its own it reaches <strong>0.6122</strong>, well above the other single-clue versions. Year, time slot, and broadcaster all help the model read a show's starting position before viewers react.
+        </div>
+      </div>
+      <div class="tw-item" data-i="1">
+        <div class="tw-num">02</div>
+        <div class="tw-body">
+          <strong>Image helps more than Text.</strong>
+          Image-only beats Text-only, and the strongest pair is <strong>Metadata + Image</strong> at <strong>0.6456</strong>. Image carries useful information that Text does not always capture.
+        </div>
+      </div>
+      <div class="tw-item" data-i="2">
+        <div class="tw-num">03</div>
+        <div class="tw-body">
+          <strong>Time slot gives a strong, actionable baseline.</strong>
+          After splitting by slot, the same model family remains informative in every group, and the top APs become easier to interpret by context: <strong>Morning 0.8081</strong>, <strong>Afternoon-Eve 0.7585</strong>, <strong>Late Night 0.2921</strong>.
+        </div>
+      </div>
+      <div class="tw-item" data-i="3">
+        <div class="tw-num">04</div>
+        <div class="tw-body">
+          <strong>Station analysis turns performance into strategy.</strong>
+          The station profile explains why results differ: <strong>NTV</strong> starts with a much higher chart rate (<strong>47.4%</strong>) than <strong>TV Tokyo</strong> (<strong>8.3%</strong>) or <strong>TBS</strong> (<strong>7.5%</strong>). This helps identify where Image or Text adds the most practical value.
+        </div>
+      </div>
+    </div>
+
+    <p class="closing-note">
+      Data sources: Video Research Ltd. · MyAnimeList · Japanese Wikipedia · Shoboi Calendar<br>
+      Based on pre-broadcast information only. This project measures ranking performance, not artistic quality.<br>
+      <em>Multi-Modal Supervised Learning for Improving Japanese Anime Audience Ratings Prediction</em>
+      · Sijie Huang · JMM629 Advanced Infographics · 2026
+    </p>
+  </div>
+</section>
+
+<div id="tooltip" class="tooltip" role="tooltip" aria-hidden="true"></div>
+
+<script src="vendor/d3.v7.min.js"></script>
+<script src="vendor/scrollama.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
